@@ -1,0 +1,50 @@
+﻿@model GerenciPessoa.Models.PessoaModel
+
+@{
+	ViewBag.Title = "Detalhes";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes das pessoas cadastradas</title>
+</head>
+<body>
+    <div>
+        <h4>PessoaModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.sobrenome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.sobrenome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dataaniversario)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dataaniversario)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Voltar a lista", "Index")
+    </p>
+</body>
+</html>
